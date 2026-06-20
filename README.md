@@ -7,7 +7,6 @@
 **Base de datos vectorial:** ElasticSearch
 
 > [!NOTE]
->  Resumen del Proyecto
 > Este proyecto implementa un motor de búsqueda avanzado utilizando **Elasticsearch** (v8.13) en un entorno contenedorizado con Docker. Emplea el modelo de Inteligencia Artificial `paraphrase-multilingual-MiniLM-L12-v2` (vía Hugging Face) para transformar texto en vectores de 384 dimensiones. El sistema destaca por una arquitectura que calcula el algoritmo **Reciprocal Rank Fusion (RRF)** en la capa de la aplicación (Python), logrando una **Búsqueda Híbrida** de nivel empresarial a costo cero.
 
 ---
@@ -75,7 +74,7 @@ py -m pip install -r requirements.txt
 ```
 
 > [!tip]
-> Consejo de Buenas Prácticas
+> **Consejo de Buenas Prácticas:**
 > Se recomienda realizar esta instalación dentro de un entorno virtual (`venv`) para no crear conflictos con otros proyectos de la computadora.
 
 > [!tip]
@@ -83,7 +82,7 @@ py -m pip install -r requirements.txt
 > Si el comando anterior no funciona, intente con `pip install -r requirements.txt`. Si tampoco funciona, consulte la sección de Troubleshooting sobre el error de `pip` no reconocido como comando.
 
 > [!tip]
-> Consejo de Buenas Prácticas Se recomienda realizar esta instalación dentro de un entorno virtual (`venv`) para no crear conflictos con otros proyectos de la computadora.
+> **Consejo de Buenas:** Prácticas Se recomienda realizar esta instalación dentro de un entorno virtual (`venv`) para no crear conflictos con otros proyectos de la computadora.
 
 ##  4. Levantamiento de la Base de Datos
 
@@ -126,7 +125,7 @@ python ingest_soporte.py
 
 
 > [!TIP]
-> Tiempo de espera La primera vez que ejecute estos scripts, el sistema tardará unos segundos extra porque descargará automáticamente el modelo pre-entrenado de Hugging Face (~90MB).
+> **Tiempo de espera:** La primera vez que ejecute estos scripts, el sistema tardará unos segundos extra porque descargará automáticamente el modelo pre-entrenado de Hugging Face (~90MB).
 
 ##  6. Ejecución y Uso del Sistema
 

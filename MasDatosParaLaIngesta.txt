@@ -1,0 +1,67 @@
+,
+ {
+  "titulo":"Tecla del teclado pegada",
+  "categoria":"Hardware",
+  "problema":"La tecla 'Enter' se queda presionada sola y escribe caracteres infinitos.",
+  "solucion":"Realizar limpieza física del teclado con aire comprimido. Si el daño persiste, es necesario reemplazar el teclado."
+ },
+ {
+  "titulo":"Cortes en llamadas de Teams",
+  "categoria":"Redes",
+  "problema":"La llamada de Teams se corta cada 5 minutos o se congela la imagen.",
+  "solucion":"Revisar la estabilidad de la conexión a internet. Se recomienda usar cable Ethernet en lugar de WiFi para videollamadas."
+ },
+ {
+  "titulo":"Sin permisos de instalación",
+  "categoria":"Sistemas",
+  "problema":"Intento instalar un programa nuevo y me dice que necesito permisos de administrador.",
+  "solucion":"Las políticas de seguridad impiden instalaciones propias. Abrir un ticket para solicitar instalación remota por parte de TI."
+ },
+ {
+  "titulo":"Antivirus desactualizado",
+  "categoria":"Seguridad",
+  "problema":"Me sale un mensaje en la esquina que dice que las firmas de seguridad están viejas.",
+  "solucion":"Abrir la consola del antivirus y forzar la opción 'Buscar actualizaciones'. Reiniciar el equipo tras el proceso."
+ },
+ {
+  "titulo":"Error de disco lleno",
+  "categoria":"Hardware",
+  "problema":"Me sale una alerta de que ya no tengo espacio para guardar documentos.",
+  "solucion":"Ejecutar el liberador de espacio en disco, borrar descargas antiguas y mover archivos grandes a la nube o servidor."
+ },
+ {
+  "titulo":"La laptop no carga",
+  "categoria":"Hardware",
+  "problema":"Conecto el cargador pero la batería no sube del 0% o no enciende el LED.",
+  "solucion":"Verificar que el cargador esté bien conectado al tomacorriente. Probar con otro cargador compatible o revisar el puerto de carga."
+ },
+ {
+  "titulo":"Zoom sin audio",
+  "categoria":"Software",
+  "problema":"Entro a la reunión pero no escucho a nadie y ellos no me escuchan a mí.",
+  "solucion":"Revisar la configuración de audio en Zoom y asegurar que el micrófono y altavoz correctos estén seleccionados."
+ },
+ {
+  "titulo":"VPN desconectada",
+  "categoria":"Redes",
+  "problema":"El icono de la VPN tiene un triángulo amarillo y no me deja navegar.",
+  "solucion":"Desconectar y volver a conectar la VPN. Si el error persiste, reiniciar el servicio 'Cisco AnyConnect' desde los servicios de Windows."
+ },
+ {
+  "titulo":"Pantallazo azul",
+  "categoria":"Hardware",
+  "problema":"La computadora se bloqueó y mostró una pantalla azul con código de error.",
+  "solucion":"Reiniciar el equipo. Si el error es recurrente, anotar el código de error y contactar a soporte técnico para revisión de hardware."
+ },
+ {
+  "titulo":"Lentitud extrema en navegador",
+  "categoria":"Software",
+  "problema":"Google Chrome se queda pegado o se cierra solo cuando abro muchas pestañas.",
+  "solucion":"Borrar caché y cookies del navegador, y desactivar extensiones no autorizadas."
+ },
+ {
+  "titulo":"No puedo imprimir en color",
+  "categoria":"Hardware",
+  "problema":"La impresora sale todo en blanco y negro aunque seleccioné color.",
+  "solucion":"Verificar configuración de la impresora en el Panel de Control y revisar niveles de tinta/tóner."
+ }

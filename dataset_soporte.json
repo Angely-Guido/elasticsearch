@@ -1,0 +1,98 @@
+[
+ {
+  "titulo":"Computadora lenta",
+  "categoria":"Hardware",
+  "problema":"El equipo tarda demasiado en iniciar, abrir programas y responde lentamente durante el trabajo.",
+  "solucion":"Revisar memoria RAM, cerrar programas innecesarios, eliminar archivos temporales y comprobar espacio disponible del disco."
+ },
+ {
+  "titulo":"Computadora se congela",
+  "categoria":"Hardware",
+  "problema":"La computadora deja de responder cuando se utilizan varias aplicaciones al mismo tiempo.",
+  "solucion":"Revisar consumo de recursos, aumentar memoria RAM si es necesario y cerrar procesos que consumen muchos recursos."
+ },
+ {
+  "titulo":"Equipo se calienta demasiado",
+  "categoria":"Hardware",
+  "problema":"La computadora aumenta mucho su temperatura y puede apagarse después de cierto tiempo de uso.",
+  "solucion":"Limpiar ventiladores, revisar sistema de refrigeración y evitar bloquear las salidas de aire."
+ },
+ {
+  "titulo":"No hay conexión WiFi",
+  "categoria":"Redes",
+  "problema":"El usuario no logra conectarse a la red inalámbrica de la empresa.",
+  "solucion":"Verificar contraseña, reiniciar adaptador inalámbrico, revisar configuración IP y conexión del router."
+ },
+ {
+  "titulo":"Internet lento",
+  "categoria":"Redes",
+  "problema":"La navegación funciona pero presenta baja velocidad y cortes frecuentes.",
+  "solucion":"Revisar cantidad de dispositivos conectados, señal del router y consumo de ancho de banda."
+ },
+ {
+  "titulo":"No puedo entrar al correo corporativo",
+  "categoria":"Sistemas",
+  "problema":"El usuario intenta ingresar al correo empresarial pero recibe errores de acceso.",
+  "solucion":"Validar usuario, restablecer contraseña y comprobar permisos de la cuenta."
+ },
+ {
+  "titulo":"Programa no abre",
+  "categoria":"Software",
+  "problema":"Una aplicación instalada no inicia correctamente o muestra errores al ejecutarse.",
+  "solucion":"Actualizar software, reinstalar componentes necesarios y verificar compatibilidad del sistema."
+ },
+ {
+  "titulo":"Sistema operativo lento",
+  "categoria":"Software",
+  "problema":"El sistema tarda en responder después de iniciar sesión.",
+  "solucion":"Desactivar programas de inicio innecesarios, actualizar sistema y revisar almacenamiento."
+ },
+ {
+  "titulo":"Archivo eliminado accidentalmente",
+  "categoria":"Seguridad",
+  "problema":"El usuario eliminó información importante y necesita recuperarla.",
+  "solucion":"Revisar papelera, copias de seguridad y herramientas de recuperación disponibles."
+ },
+ {
+  "titulo":"Posible virus en computadora",
+  "categoria":"Seguridad",
+  "problema":"El equipo muestra ventanas extrañas, lentitud y comportamiento desconocido.",
+  "solucion":"Ejecutar análisis antivirus, actualizar seguridad y eliminar archivos sospechosos."
+ },
+ {
+  "titulo":"Contraseña olvidada",
+  "categoria":"Acceso",
+  "problema":"El usuario no recuerda la contraseña para ingresar a una plataforma.",
+  "solucion":"Realizar recuperación de contraseña mediante mecanismos seguros."
+ },
+ {
+  "titulo":"Impresora no imprime",
+  "categoria":"Hardware",
+  "problema":"La impresora está conectada pero no procesa documentos enviados.",
+  "solucion":"Revisar conexión, papel, controladores y reiniciar el dispositivo."
+ },
+ {
+  "titulo":"Monitor sin señal",
+  "categoria":"Hardware",
+  "problema":"La pantalla se queda negra o dice 'No Signal' aunque la computadora parece encendida.",
+  "solucion":"Verificar la conexión del cable HDMI/VGA entre el monitor y la torre. Probar con otro cable si el problema persiste."
+ },
+ {
+  "titulo":"Acceso remoto a archivos",
+  "categoria":"Redes",
+  "problema":"No puedo ver las carpetas compartidas de la empresa desde mi casa.",
+  "solucion":"Asegurarse de estar conectado a la VPN corporativa y validar que el usuario tenga permisos de red."
+ },
+ {
+  "titulo":"Excel se cierra al guardar",
+  "categoria":"Software",
+  "problema":"El programa Excel se traba y se cierra inesperadamente cuando intento guardar archivos grandes.",
+  "solucion":"Reparar la instalación de Microsoft Office desde el Panel de Control y limpiar archivos temporales."
+ },
+ {
+  "titulo":"Correo sospechoso (Phishing)",
+  "categoria":"Seguridad",
+  "problema":"Me llegó un correo que dice ser del banco pidiendo mis claves, ¿qué hago?",
+  "solucion":"No hacer clic en ningún enlace, eliminar el correo inmediatamente y reportar la dirección al departamento de TI."
+ }
+]

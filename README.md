@@ -43,13 +43,13 @@ Antes de iniciar el sistema, asegúrese de contar con las siguientes herramienta
 Para obtener el código fuente manteniendo intacta la arquitectura plana del proyecto, abra su terminal en la ubicación donde desea guardar la carpeta y ejecute el siguiente comando:
 
 ```bash
-git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+git clone https://github.com/Angely-Guido/elasticsearch.git
 ```
 
 Una vez descargado, ingrese a la carpeta del proyecto para ejecutar los siguientes pasos:
 
 ```Bash
-cd tu-repositorio
+cd la_ubicacion_de_la_carpeta_clonada
 ```
 ##  3. Configuración del Entorno
 

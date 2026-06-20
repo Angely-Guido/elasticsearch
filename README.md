@@ -6,7 +6,8 @@
 **Desarrollado por:** Grupo 7
 **Base de datos vectorial:** ElasticSearch
 
-> [!abstract] Resumen del Proyecto
+> [!NOTE]
+>  Resumen del Proyecto
 > Este proyecto implementa un motor de búsqueda avanzado utilizando **Elasticsearch** (v8.13) en un entorno contenedorizado con Docker. Emplea el modelo de Inteligencia Artificial `paraphrase-multilingual-MiniLM-L12-v2` (vía Hugging Face) para transformar texto en vectores de 384 dimensiones. El sistema destaca por una arquitectura que calcula el algoritmo **Reciprocal Rank Fusion (RRF)** en la capa de la aplicación (Python), logrando una **Búsqueda Híbrida** de nivel empresarial a costo cero.
 
 ---
@@ -73,13 +74,16 @@ Abra su terminal (PowerShell o CMD) en la carpeta del proyecto e instale las lib
 py -m pip install -r requirements.txt
 ```
 
-> [!tip] Consejo de Buenas Prácticas
+> [!tip]
+> Consejo de Buenas Prácticas
 > Se recomienda realizar esta instalación dentro de un entorno virtual (`venv`) para no crear conflictos con otros proyectos de la computadora.
 
-> [!tip] Alternativa si `py` no es reconocido
+> [!tip]
+> Alternativa si `py` no es reconocido
 > Si el comando anterior no funciona, intente con `pip install -r requirements.txt`. Si tampoco funciona, consulte la sección de Troubleshooting sobre el error de `pip` no reconocido como comando.
 
-> [!tip] Consejo de Buenas Prácticas Se recomienda realizar esta instalación dentro de un entorno virtual (`venv`) para no crear conflictos con otros proyectos de la computadora.
+> [!tip]
+> Consejo de Buenas Prácticas Se recomienda realizar esta instalación dentro de un entorno virtual (`venv`) para no crear conflictos con otros proyectos de la computadora.
 
 ##  4. Levantamiento de la Base de Datos
 
@@ -95,9 +99,11 @@ Si responde con un número de versión, proceda a encender el clúster de Elasti
 docker compose up -d 
 ```
 
-> [!warning] La importancia del comando `-d` (Detached) Es vital incluir el `-d` al final. Esto obliga a la base de datos a correr silenciosamente en segundo plano, dejándole la terminal libre para ejecutar los siguientes scripts de Python. Si no lo pone, la terminal quedará bloqueada mostrando bitácoras.
+> [!warning]
+> La importancia del comando `-d` (Detached) Es vital incluir el `-d` al final. Esto obliga a la base de datos a correr silenciosamente en segundo plano, dejándole la terminal libre para ejecutar los siguientes scripts de Python. Si no lo pone, la terminal quedará bloqueada mostrando bitácoras.
 
-> [!success] Auditoría de Arranque
+> [!NOTE]
+> Auditoría de Arranque
 > Para confirmar que ambos servicios están vivos, verifique los dos por separado:
 > 
 > **Elasticsearch:** abra su navegador e ingrese a `http://localhost:9200`. Debería ver un archivo JSON de respuesta con el mensaje *"You Know, for Search"*.
@@ -119,7 +125,8 @@ python ingest_soporte.py
 ```
 
 
-> [!info] Tiempo de espera La primera vez que ejecute estos scripts, el sistema tardará unos segundos extra porque descargará automáticamente el modelo pre-entrenado de Hugging Face (~90MB).
+> [!TIP]
+> Tiempo de espera La primera vez que ejecute estos scripts, el sistema tardará unos segundos extra porque descargará automáticamente el modelo pre-entrenado de Hugging Face (~90MB).
 
 ##  6. Ejecución y Uso del Sistema
 
@@ -158,7 +165,8 @@ El sistema incluye una interfaz gráfica para auditar los registros directamente
 4. Haga clic en **Conectar**.
     
 
-> [!warning] Cuidado al Exportar Datos Si desea utilizar la función de "Exportar" en Dejavu, asegúrese de conectarse indicando el nombre exacto del índice (ej. `soporte_tecnico`). Si utiliza el comodín asterisco (`*`), la herramienta de exportación colapsará y mostrará una pantalla en blanco debido a restricciones internas.
+> [!warning]
+> Cuidado al Exportar Datos Si desea utilizar la función de "Exportar" en Dejavu, asegúrese de conectarse indicando el nombre exacto del índice (ej. `soporte_tecnico`). Si utiliza el comodín asterisco (`*`), la herramienta de exportación colapsará y mostrará una pantalla en blanco debido a restricciones internas.
 
 ##  8. Apagado Limpio y Mantenimiento
 
@@ -168,14 +176,16 @@ Una vez finalizada la demostración, **NO** basta con cerrar la terminal. El mot
 docker compose down
 ```
 
-> [!success] Persistencia de Datos ¡No se preocupe por la pérdida de vectores! Gracias a la configuración del volumen (`esdata`) en el archivo Docker Compose, toda la información de la base de datos queda guardada permanentemente en su disco duro para la próxima sesión.
+> [!WARNING]
+> Persistencia de Datos ¡No se preocupe por la pérdida de vectores! Gracias a la configuración del volumen (`esdata`) en el archivo Docker Compose, toda la información de la base de datos queda guardada permanentemente en su disco duro para la próxima sesión.
 
 
 ### 9. Reinicio de Fábrica (Opcional)
 
 Si se necesita borrar por completo la base de datos y comenzar desde cero (eliminando todos los índices, vectores y configuraciones guardadas), ejecute el siguiente comando.
 
-> [!danger] Precaución: Pérdida total de datos El modificador `-v` (volumes) le indica a Docker que destruya el disco duro virtual donde Elasticsearch guarda la información. Después de ejecutar esto, la base de datos quedará completamente en blanco y deberá volver a correr los scripts de ingesta.
+> [!WARNING]
+> Precaución: Pérdida total de datos El modificador `-v` (volumes) le indica a Docker que destruya el disco duro virtual donde Elasticsearch guarda la información. Después de ejecutar esto, la base de datos quedará completamente en blanco y deberá volver a correr los scripts de ingesta.
 
 ```Bash
 docker compose down -v
@@ -183,13 +193,16 @@ docker compose down -v
 
 ##  10. Solución de Problemas Frecuentes 
 
-> [!faq]- Error: `No se pudo conectar a Elasticsearch` al abrir la web o la consola **Causa:** El contenedor de Docker no está activo. **Solución:** Abra la terminal y asegúrese de ejecutar `docker compose up -d` antes de iniciar los scripts de Python.
+> [!WARNING]
+> - Error: `No se pudo conectar a Elasticsearch` al abrir la web o la consola **Causa:** El contenedor de Docker no está activo. **Solución:** Abra la terminal y asegúrese de ejecutar `docker compose up -d` antes de iniciar los scripts de Python.
 
-> [!faq]- Error: `pip` no reconocido como comando interno o externo
+> [!WARNING]
+> - Error: `pip` no reconocido como comando interno o externo
 > **Causa:** El instalador de Python no agregó la carpeta `Scripts` al PATH de Windows.
 > **Solución:** Ejecute `python -m pip install --force-reinstall pip`, luego agregue manualmente la ruta de la carpeta `Scripts` a las Variables de Entorno del sistema y reinicie la terminal.
 
-> [!faq]- Error de conflicto de versiones de `numpy` al instalar Streamlit
+> [!WARNING]
+> - Error de conflicto de versiones de `numpy` al instalar Streamlit
 > **Causa:** Streamlit requiere una versión de `numpy` distinta a la que usan otras librerías como `opencv`.
 > **Solución:** Verifique que las librerías del proyecto sigan funcionando con:
 > ```bash
@@ -197,21 +210,26 @@ docker compose down -v
 > ```
 > Si responde correctamente, el conflicto no afecta al proyecto y puede ignorarse.
 
-> [!faq]- La columna de búsqueda Híbrida no aparece en Streamlit
+> [!WARNING]
+> - La columna de búsqueda Híbrida no aparece en Streamlit
 > **Causa:** Error de indentación en Python — el bloque `with col_h:` quedó anidado dentro de `with col_k:`.
 > **Solución:** Verifique que los tres bloques `with col_v:`, `with col_k:` y `with col_h:` tengan exactamente el mismo nivel de indentación dentro de la función.
 
-> [!faq]- Dejavu muestra "No se puede conectar" al intentar conectar con Elasticsearch
+> [!WARNING]
+> - Dejavu muestra "No se puede conectar" al intentar conectar con Elasticsearch
 > **Causa:** Configuración de CORS incompleta, o uso de `allow-origin=*` junto con `allow-credentials=true`, combinación que Elasticsearch rechaza por seguridad.
 > **Solución:** En el `docker-compose.yml`, especifique el origen exacto en lugar del comodín:
 > ```yaml
 > http.cors.allow-origin=http://localhost:1358,http://127.0.0.1:1358
 > ```
 
-> [!faq]- Las búsquedas devuelven resultados aunque no tengan relación con la consulta
+> [!WARNING]
+> - Las búsquedas devuelven resultados aunque no tengan relación con la consulta
 > **Causa:** La búsqueda vectorial siempre devuelve los documentos matemáticamente más cercanos, incluso si la similitud real es baja.
 > **Solución:** Esto no es un error del sistema. Preste atención al *score* de similitud: valores cercanos a 0.9 indican alta confianza; valores cercanos a 0.6–0.7 indican que probablemente no existe contenido relevante en el dataset seleccionado.
 
-> [!faq]- Error: `Failed to connect to the docker API` en la terminal **Causa:** El motor central de Docker Desktop está apagado. **Solución:** Busque "Docker Desktop" en el menú de Windows, ábralo y espere a que el estado cambie a verde (_Engine running_) antes de lanzar cualquier comando en PowerShell.
+> [!WARNING]
+> - Error: `Failed to connect to the docker API` en la terminal **Causa:** El motor central de Docker Desktop está apagado. **Solución:** Busque "Docker Desktop" en el menú de Windows, ábralo y espere a que el estado cambie a verde (_Engine running_) antes de lanzar cualquier comando en PowerShell.
 
-> [!faq]- Streamlit falla indicando que "no reconoce la librería" o "module not found" **Causa:** No se instalaron las dependencias del archivo o se está corriendo fuera del entorno virtual. **Solución:** Ejecute nuevamente el comando de instalación: `pip install -r requirements.txt`.
+> [!WARNING]
+> - Streamlit falla indicando que "no reconoce la librería" o "module not found" **Causa:** No se instalaron las dependencias del archivo o se está corriendo fuera del entorno virtual. **Solución:** Ejecute nuevamente el comando de instalación: `pip install -r requirements.txt`.
